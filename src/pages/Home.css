@@ -100,7 +100,12 @@ body {
   list-style: none;
   padding: 0;
 }
-
+@media screen and (max-width:490px) {
+    .card ul{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
 .card ul li {
   background: white;
   padding: 30px;
