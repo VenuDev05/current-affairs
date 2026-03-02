@@ -13,32 +13,11 @@ import img9 from '../images/img9.png'
 import img10 from '../images/img10.png'
 import img11 from '../images/img11.png'
 import img12 from '../images/img12.png'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
     return (
         <div>
-            <div className="banner">
-                <ul className='goals'>
-                    <li>
-                        <p>Live Goals</p>
-                    </li>
-                    <li>
-                        <h3>Today's Mission</h3>
-                    </li>
-                    <li>
-                        <p>Start today's learning and stay exam-ready with curated content</p>
-                    </li>
-                    <li>
-                        <button>Start Learning</button>
-                    </li>
-                </ul>
-                <ul className='task'>
-                    <li>
-                        <h4>0/6</h4>
-                        <p>Tasks</p>
-                    </li>
-                </ul>
-            </div>
             <div className="card">
                 <ul>
                     <li>
@@ -68,7 +47,7 @@ const Home = () => {
                 </ul>
             </div>
             <div className="learn">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M80 259.8L289.2 345.9C299 349.9 309.4 352 320 352C330.6 352 341 349.9 350.8 345.9L593.2 246.1C602.2 242.4 608 233.7 608 224C608 214.3 602.2 205.6 593.2 201.9L350.8 102.1C341 98.1 330.6 96 320 96C309.4 96 299 98.1 289.2 102.1L46.8 201.9C37.8 205.6 32 214.3 32 224L32 520C32 533.3 42.7 544 56 544C69.3 544 80 533.3 80 520L80 259.8zM128 331.5L128 448C128 501 214 544 320 544C426 544 512 501 512 448L512 331.4L369.1 390.3C353.5 396.7 336.9 400 320 400C303.1 400 286.5 396.7 270.9 390.3L128 331.4z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M80 259.8L289.2 345.9C299 349.9 309.4 352 320 352C330.6 352 341 349.9 350.8 345.9L593.2 246.1C602.2 242.4 608 233.7 608 224C608 214.3 602.2 205.6 593.2 201.9L350.8 102.1C341 98.1 330.6 96 320 96C309.4 96 299 98.1 289.2 102.1L46.8 201.9C37.8 205.6 32 214.3 32 224L32 520C32 533.3 42.7 544 56 544C69.3 544 80 533.3 80 520L80 259.8zM128 331.5L128 448C128 501 214 544 320 544C426 544 512 501 512 448L512 331.4L369.1 390.3C353.5 396.7 336.9 400 320 400C303.1 400 286.5 396.7 270.9 390.3L128 331.4z" /></svg>
                 <p className="d-inline-flex gap-1">
                     <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                         Learn Hub
@@ -76,14 +55,26 @@ const Home = () => {
                 </p>
                 <div className="collapse" id="collapseExample">
                     <div class="card card-body">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M232 144C218.7 144 208 154.7 208 168L208 472C208 480.4 206.6 488.5 203.9 496L504 496C517.3 496 528 485.3 528 472L528 168C528 154.7 517.3 144 504 144L232 144zM136 544C96.2 544 64 511.8 64 472L64 176C64 162.7 74.7 152 88 152C101.3 152 112 162.7 112 176L112 472C112 485.3 122.7 496 136 496C149.3 496 160 485.3 160 472L160 168C160 128.2 192.2 96 232 96L504 96C543.8 96 576 128.2 576 168L576 472C576 511.8 543.8 544 504 544L136 544zM256 216C256 202.7 266.7 192 280 192L328 192C341.3 192 352 202.7 352 216L352 264C352 277.3 341.3 288 328 288L280 288C266.7 288 256 277.3 256 264L256 216zM408 240L456 240C469.3 240 480 250.7 480 264C480 277.3 469.3 288 456 288L408 288C394.7 288 384 277.3 384 264C384 250.7 394.7 240 408 240zM280 320L456 320C469.3 320 480 330.7 480 344C480 357.3 469.3 368 456 368L280 368C266.7 368 256 357.3 256 344C256 330.7 266.7 320 280 320zM280 400L456 400C469.3 400 480 410.7 480 424C480 437.3 469.3 448 456 448L280 448C266.7 448 256 437.3 256 424C256 410.7 266.7 400 280 400z"/></svg>
-                        <h3>Daily CA Exam</h3>
-                        <p>Test your daily knowledge</p>
+                        <a
+                            href="https://play.google.com/store/apps/details?id=com.master.minds.ca"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M232 144C218.7 144 208 154.7 208 168L208 472C208 480.4 206.6 488.5 203.9 496L504 496C517.3 496 528 485.3 528 472L528 168C528 154.7 517.3 144 504 144L232 144zM136 544C96.2 544 64 511.8 64 472L64 176C64 162.7 74.7 152 88 152C101.3 152 112 162.7 112 176L112 472C112 485.3 122.7 496 136 496C149.3 496 160 485.3 160 472L160 168C160 128.2 192.2 96 232 96L504 96C543.8 96 576 128.2 576 168L576 472C576 511.8 543.8 544 504 544L136 544zM256 216C256 202.7 266.7 192 280 192L328 192C341.3 192 352 202.7 352 216L352 264C352 277.3 341.3 288 328 288L280 288C266.7 288 256 277.3 256 264L256 216zM408 240L456 240C469.3 240 480 250.7 480 264C480 277.3 469.3 288 456 288L408 288C394.7 288 384 277.3 384 264C384 250.7 394.7 240 408 240zM280 320L456 320C469.3 320 480 330.7 480 344C480 357.3 469.3 368 456 368L280 368C266.7 368 256 357.3 256 344C256 330.7 266.7 320 280 320zM280 400L456 400C469.3 400 480 410.7 480 424C480 437.3 469.3 448 456 448L280 448C266.7 448 256 437.3 256 424C256 410.7 266.7 400 280 400z" /></svg>
+                            <h3>Daily CA Exam</h3>
+                            <p>Test your daily knowledge</p>
+                        </a>
                     </div>
                     <div className="card card-body">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M232 144C218.7 144 208 154.7 208 168L208 472C208 480.4 206.6 488.5 203.9 496L504 496C517.3 496 528 485.3 528 472L528 168C528 154.7 517.3 144 504 144L232 144zM136 544C96.2 544 64 511.8 64 472L64 176C64 162.7 74.7 152 88 152C101.3 152 112 162.7 112 176L112 472C112 485.3 122.7 496 136 496C149.3 496 160 485.3 160 472L160 168C160 128.2 192.2 96 232 96L504 96C543.8 96 576 128.2 576 168L576 472C576 511.8 543.8 544 504 544L136 544zM256 216C256 202.7 266.7 192 280 192L328 192C341.3 192 352 202.7 352 216L352 264C352 277.3 341.3 288 328 288L280 288C266.7 288 256 277.3 256 264L256 216zM408 240L456 240C469.3 240 480 250.7 480 264C480 277.3 469.3 288 456 288L408 288C394.7 288 384 277.3 384 264C384 250.7 394.7 240 408 240zM280 320L456 320C469.3 320 480 330.7 480 344C480 357.3 469.3 368 456 368L280 368C266.7 368 256 357.3 256 344C256 330.7 266.7 320 280 320zM280 400L456 400C469.3 400 480 410.7 480 424C480 437.3 469.3 448 456 448L280 448C266.7 448 256 437.3 256 424C256 410.7 266.7 400 280 400z"/></svg>
-                        <h3>Create Custom Exam</h3>
-                        <p>By topic, difficult, or time</p>
+                        <a
+                            href="https://play.google.com/store/apps/details?id=com.master.minds.ca"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M232 144C218.7 144 208 154.7 208 168L208 472C208 480.4 206.6 488.5 203.9 496L504 496C517.3 496 528 485.3 528 472L528 168C528 154.7 517.3 144 504 144L232 144zM136 544C96.2 544 64 511.8 64 472L64 176C64 162.7 74.7 152 88 152C101.3 152 112 162.7 112 176L112 472C112 485.3 122.7 496 136 496C149.3 496 160 485.3 160 472L160 168C160 128.2 192.2 96 232 96L504 96C543.8 96 576 128.2 576 168L576 472C576 511.8 543.8 544 504 544L136 544zM256 216C256 202.7 266.7 192 280 192L328 192C341.3 192 352 202.7 352 216L352 264C352 277.3 341.3 288 328 288L280 288C266.7 288 256 277.3 256 264L256 216zM408 240L456 240C469.3 240 480 250.7 480 264C480 277.3 469.3 288 456 288L408 288C394.7 288 384 277.3 384 264C384 250.7 394.7 240 408 240zM280 320L456 320C469.3 320 480 330.7 480 344C480 357.3 469.3 368 456 368L280 368C266.7 368 256 357.3 256 344C256 330.7 266.7 320 280 320zM280 400L456 400C469.3 400 480 410.7 480 424C480 437.3 469.3 448 456 448L280 448C266.7 448 256 437.3 256 424C256 410.7 266.7 400 280 400z" /></svg>
+                            <h3>Create Custom Exam</h3>
+                            <p>By topic, difficult, or time</p>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -91,52 +82,148 @@ const Home = () => {
                 <h3>Categories</h3>
                 <ul className='cat-ul'>
                     <li>
-                        <img src={img1} alt="" />
+                        <img src={img1} alt="Master Minds App" />
                         <p>India</p>
+                        <p>Contents that related and done by India</p>
+                        <a
+                            href="https://play.google.com/store/apps/details?id=com.master.minds.ca"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <button>view more</button>
+                        </a>
                     </li>
-                    <li>
-                        <img src={img2} alt="" />
+                     <li>
+                        <img src={img2} alt="Master Minds App" />
                         <p>Business</p>
+                        <p>Articles from Business</p>
+                        <a
+                            href="https://play.google.com/store/apps/details?id=com.master.minds.ca"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <button>view more</button>
+                        </a>
                     </li>
-                    <li>
-                        <img src={img3} alt="" />
+                     <li>
+                        <img src={img3} alt="Master Minds App" />
                         <p>World</p>
+                        <p>Contents and Articles that are spreading on world</p>
+                        <a
+                            href="https://play.google.com/store/apps/details?id=com.master.minds.ca"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <button>view more</button>
+                        </a>
                     </li>
-                    <li>
-                        <img src={img4} alt="" />
+                     <li>
+                        <img src={img4} alt="Master Minds App" />
                         <p>Sports</p>
+                        <p>Contents that related to Sports</p>
+                        <a
+                            href="https://play.google.com/store/apps/details?id=com.master.minds.ca"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <button>view more</button>
+                        </a>
                     </li>
-                    <li>
-                        <img src={img5} alt="" />
+                     <li>
+                        <img src={img5} alt="Master Minds App" />
                         <p>Summit</p>
+                        <p>News on summit</p>
+                        <a
+                            href="https://play.google.com/store/apps/details?id=com.master.minds.ca"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <button>view more</button>
+                        </a>
                     </li>
-                    <li>
-                        <img src={img6} alt="" />
+                     <li>
+                        <img src={img6} alt="Master Minds App" />
                         <p>Bank</p>
+                        <p>Contents that related to Bank</p>
+                        <a
+                            href="https://play.google.com/store/apps/details?id=com.master.minds.ca"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <button>view more</button>
+                        </a>
                     </li>
-                    <li>
-                        <img src={img7} alt="" />
+                     <li>
+                        <img src={img7} alt="Master Minds App" />
                         <p>Yojana</p>
+                        <p>Contents that related about Yojana</p>
+                        <a
+                            href="https://play.google.com/store/apps/details?id=com.master.minds.ca"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <button>view more</button>
+                        </a>
                     </li>
-                    <li>
-                        <img src={img8} alt="" />
+                     <li>
+                        <img src={img8} alt="Master Minds App" />
                         <p>Defence</p>
+                        <p>Daily Contents that covered Defence</p>
+                        <a
+                            href="https://play.google.com/store/apps/details?id=com.master.minds.ca"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <button>view more</button>
+                        </a>
                     </li>
-                    <li>
-                        <img src={img9} alt="" />
+                     <li>
+                        <img src={img9} alt="Master Minds App" />
                         <p>Important</p>
+                        <p>Contents that are very Important</p>
+                        <a
+                            href="https://play.google.com/store/apps/details?id=com.master.minds.ca"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <button>view more</button>
+                        </a>
                     </li>
-                    <li>
-                        <img src={img10} alt="" />
+                     <li>
+                        <img src={img10} alt="Master Minds App" />
                         <p>Scheme</p>
+                        <p>Updates every schemes that are released</p>
+                        <a
+                            href="https://play.google.com/store/apps/details?id=com.master.minds.ca"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <button>view more</button>
+                        </a>
                     </li>
-                    <li>
-                        <img src={img11} alt="" />
+                     <li>
+                        <img src={img11} alt="Master Minds App" />
                         <p>Exercise</p>
+                        <p>Gymnastic and Atheletic articles</p>
+                        <a
+                            href="https://play.google.com/store/apps/details?id=com.master.minds.ca"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <button>view more</button>
+                        </a>
                     </li>
-                    <li>
-                        <img src={img12} alt="" />
+                     <li>
+                        <img src={img12} alt="Master Minds App" />
                         <p>Awards</p>
+                        <p>Content that related to Awards</p>
+                        <a
+                            href="https://play.google.com/store/apps/details?id=com.master.minds.ca"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <button>view more</button>
+                        </a>
                     </li>
                 </ul>
             </div>
